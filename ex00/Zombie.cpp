@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 15:01:44 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/27 14:16:34 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:57:21 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Zombie::Zombie(void)
 {
 	std::cout << "\e[0;32mDefault Zombie constructor called\e[0m" << std::endl;
-	this->name.empty();
+	this->name = "";
 }
 
 Zombie::Zombie(std::string name)
