@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:17:30 by cdeville          #+#    #+#             */
-/*   Updated: 2024/10/01 11:57:19 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:56:49 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	Harl::complain( std::string level )
 	{
 		if (level.compare(level_name[i]) == 0)
 		{
-			(this->*ptr_tab[i])();
+			for (int j = i; j < 4; j++)
+				(this->*ptr_tab[j])();
 			return ;
 		}
 	}
