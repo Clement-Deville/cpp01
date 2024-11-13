@@ -6,13 +6,13 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:25:02 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/28 17:50:23 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:36:56 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-	HumanB::HumanB(std::string newName)
+	HumanB::HumanB(const std::string newName)
 	{
 		std::cout << "\e[0;32mArgument HumanB constructor called: \e[0;33m" <<
 			newName << "\e[0m" <<  std::endl;

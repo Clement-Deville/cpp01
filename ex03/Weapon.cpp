@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:20:57 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/28 17:01:06 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:35:44 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Weapon::Weapon(void)
 	type = "";
 }
 
-Weapon::Weapon(std::string name)
+Weapon::Weapon(const std::string name)
 {
 	std::cout << "\e[0;32mArgument Weapon constructor called: \e[0;33m"
 		<< name << "\e[0m" << std::endl;
