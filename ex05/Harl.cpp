@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:17:30 by cdeville          #+#    #+#             */
-/*   Updated: 2024/11/13 12:28:11 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/19 13:02:23 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 Harl::Harl()
 {
-	this->ptr_tab[0] = &Harl::debug;
-	this->ptr_tab[1] = &Harl::info;
-	this->ptr_tab[2] = &Harl::warning;
-	this->ptr_tab[3] = &Harl::error;
 	std::cout << "\e[0;32mDefault Harl constructor called\e[0m" << std::endl;
 }
 
@@ -48,6 +44,8 @@ void	Harl::error(void)
 
 void	Harl::complain( std::string level )
 {
+	void	(Harl::* ptr_tab[4])(void) =
+		{&Harl::debug,  &Harl::info,  &Harl::warning,  &Harl::error};
 	std::string	level_name[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for (int i = 0; i < 4; i++)

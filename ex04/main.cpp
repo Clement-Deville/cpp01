@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:57:36 by cdeville          #+#    #+#             */
-/*   Updated: 2024/11/13 12:50:09 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/12/03 11:11:19 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,9 @@ void replace(std::string &tmp, std::string s1, std::string s2)
 	}
 }
 
-int	replace_iter(std::ifstream &infile, std::ofstream &outfile,
+int	replace_iter(std::ofstream &outfile,
 					std::string s1, std::string s2, std::string &tmp)
 {
-	// if (infile.eof() == false)
-	// 	tmp += '\n';
-	(void)infile;
 	replace(tmp, s1, s2);
 	outfile << tmp;
 	if (outfile.fail())
@@ -82,13 +79,13 @@ int	main(int argc, char *argv[])
 		return (1);
 	if (infile.eof() == false)
 		tmp += '\n';
-	if (replace_iter(infile, outfile, argv[2], argv[3], tmp))
+	if (replace_iter(outfile, argv[2], argv[3], tmp))
 		return (close_files(infile, outfile, argv[1], name));
 	while (getline(infile, tmp))
 	{
 		if (infile.eof() == false)
 			tmp += '\n';
-		if (replace_iter(infile, outfile, argv[2], argv[3], tmp))
+		if (replace_iter(outfile, argv[2], argv[3], tmp))
 			break ;
 	}
 	return (close_files(infile, outfile, argv[1], name));

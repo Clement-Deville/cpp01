@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:16:28 by cdeville          #+#    #+#             */
-/*   Updated: 2024/10/01 11:07:02 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:55:13 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ private:
 	void	info( void );
 	void	warning( void );
 	void	error( void );
-
-	void	(Harl::* ptr_tab[4])(void);
 public:
 	Harl();
 	~Harl();
