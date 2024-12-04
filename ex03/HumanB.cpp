@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:25:02 by cdeville          #+#    #+#             */
-/*   Updated: 2024/11/12 13:36:56 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:50:48 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@
 	void HumanB::attack(void)
 	{
 		if (weapon == NULL)
+		{
 			std::cerr << name << " can't attack cause he need a weapon"
 				<< std::endl;
+			return ;
+		}
 		std::cout << name <<" attacks with their "
 			<< weapon->getType() << std::endl;
 	}

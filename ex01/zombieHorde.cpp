@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:25:27 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/27 16:26:32 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:50:16 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ Zombie*	zombieHorde( int N, std::string name )
 	Zombie	*Horde;
 
 	if (N < 0)
+	{
 		std::cerr << "N can't be negative" << std::endl;
+		return (NULL);
+	}
 	Horde = new Zombie[N];
 	if (Horde == NULL)
 	{
