@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:57:36 by cdeville          #+#    #+#             */
-/*   Updated: 2024/12/03 11:11:19 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/12/05 09:29:29 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,9 @@ int	main(int argc, char *argv[])
 
 	if (argc != 4)
 		return (std::cerr << "Error" << std::endl, 1);
+	if (*argv[2] == '\0')
+		return (std::cerr
+			<< "Error, input patern can't be empty" << std::endl, 1);
 	if (open_files(infile, outfile, argv[1], name, tmp))
 		return (1);
 	if (infile.eof() == false)
